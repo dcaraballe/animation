@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Quicksand&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+h1 {
+  font-family: var(--main-txt-font);
+  color: var(--main-txt-color);
+}
+
+h2 {
+  font-family: var(--main-txt-font);
+  color: var(--main-txt-color);
+}
+
+h3 {
+  color: aliceblue;
+  font-family: var(--main-txt-font);
+  font-size: xx-large;
+}
+
+p {
+  font-family: var(--main-txt-font);
+  color: aliceblue;
+}
+
+:root {
+  --main-bg-color: black;
+  --main-txt-color: aliceblue;
+  --main-txt-font: 'Quicksand', sans-serif;
+
+}
+
+body {
+  background-color: var(--main-bg-color);
+}
+
+/*------------NAV----------*/
+
+li, a, button {
+  font-family: var(--main-txt-font);
+  font-weight: 300;
+  font-size: 15px;
+  color: var(--main-txt-color);
+  text-decoration: none;
+}
+
+.main-nav {
+  list-style: none;
+  text-align: center;
+  padding: 20px;
+  background-color: var(--main-bg-color);
+}
+
+.main-nav li {
+  display: inline-block;
+  padding: 20px;
+  text-align: center;
+}
+
+li a {
+  transition: all .50s ease 0s;
+}
+
+li a:hover {
+  color: black;
+  background-color: aliceblue;
+  padding: 0 30px;
+  border-radius: 10px;
+}
+
+.tagline {
+  animation: textzoom 5s;
+}
+
+@keyframes textzoom {
+ 0% {
+  transform: scale(2);
+ }
+ 100% {
+  transform: scale(1);
+ }
+}
+
+
+
+@media screen and (max-width: 767px) {
+  .main-nav li {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }  
+
+  li a {
+    font-size: medium;
+  }
+}
+/*-----Subject To Change------*/
+@media screen and (max-width: 767px) {
+  .heading {
+    font-size:  12px;
+  }
+  
+}
+
+/*------------HEADER----------*/
+
+.banner {
+  margin-top: -2rem;
+}
+
+.logo {
+  text-align: center;
+ 
+}
+
+header {
+  background-color: var(--main-bg-color);
+  display: flex;
+  text-align: center;
+}
+
+/*------------PAGES----------*/
+
+main {
+  background-color: var(--main-bg-color);
+  padding: 0 5rem;
+  text-align: center;
+}
+
+.about h3 {
+  padding-bottom: 2rem;
+}
+.about p {
+  font-size: larger;
+}
+
+.home {
+  padding: 5px;
+}
+
+.home-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 20px;
+  padding-top: 2rem;
+  font-size: medium;
+  color: aliceblue;
+}
+
+.img1 {
+  animation: SlideInLeft 1s ease-in-out;
+}
+.img2 {
+  animation: SlideInLeft 1.5s ease-in-out;
+}
+.img3 {
+  animation: SlideInLeft 2s ease-in-out;
+}
+.img4 {
+  animation: SlideInLeft 2.5s ease-in-out;
+}
+
+/*--------Animation practice-----*/
+
+
+@keyframes SlideInLeft {
+  from {
+    transform: translateX(-300px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+button {
+  padding: 9px 20px;
+  background-color: #5b79737a;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  margin: 1rem;
+}
+
+button:hover {
+  background-color: aliceblue;
+  padding: 9px 30px;
+  color: black;
+  box-shadow: 0px 0px 30px 2px #01add9;
+
+}
+
+/*--------Media Queries -----*/
+
+
+@media screen and (max-width:767px) {
+  .home-grid {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: auto;
+    font-size: medium;
+
+  }
+}
+@media screen and (min-width:1024px) {
+  .home-grid {
+    display: grid;
+    padding: 10rem;
+    border: 10rem;
+  }
+  
+}
+
+  /*--------ABOUT ME PAGE---------*/
+
+.about {
+  padding: 2rem;
+}
+
+.apple {
+  border-radius: 100px 100px 0 0;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: auto;
+  gap: 20px;
+  padding: 20px;
+  font-size: medium;
+  color: aliceblue;
+}
+@media screen and (max-width:767px) {
+  .about-grid {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr;
+    font-size: medium;
+
+
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .about-grid {
+    display: grid;
+    padding: 10rem;
+    border: 10rem;
+  }
+  
+}
+
+/*-------CONTACT------*/
+.contact-page {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
+
+.contact {
+  padding: 1rem;
+  margin: 0;
+  padding: 5%;
+  color: aliceblue;
+  width: 100%;
+}
+
+.tcontact {
+  background-color: black;
+  font-size: smaller;
+  color: aliceblue;
+}
+
+thead tr:nth-child(1) {
+  background: color #23705e;
+  color: aliceblue;
+}
+
+table {
+  border-collapse: collapse;
+  color: black;
+}
+
+tr:hover {
+  background-color: #23705e;
+}
+
+th {
+  text-align: center;
+  width: 30%;
+}
+
+td {
+  text-align: center;
+  padding: 1rem;
+}
+
+/*--------FORM---------*/
+
+input, label, .submit {
+  display: block;
+  padding: 10px;
+}
+
+input, textarea {
+  width: 100%;
+  background-color: aliceblue;
+  border: #bbb;
+  outline: none;
+  padding: 10px;
+}
+
+textarea {
+  resize:none;
+  height: 100px;
+}
+
+::placeholder {
+  font-style: italic;
+}
+
+@media screen and (max-width:767px){
+  .contact-page {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction:row;
+  }
+ .contact {
+width: 100%;
+ } 
+}
+
+/*------FOOTER------*/
+
+footer {
+  text-align: center;
+  color: black;
+  font-size: smaller;
+  background-color:green;
+  padding: 2rem 5rem 2rem 3rem;
+}
